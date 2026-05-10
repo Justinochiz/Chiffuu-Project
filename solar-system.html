@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Studio Atlas - Solar System</title>
+    <meta
+      name="description"
+      content="A solar system page with an orbital illustration and a distinct layout from the reference design."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="index.html" aria-label="Studio Atlas home">Studio Atlas</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="rotoscope.html">Rotoscope</a>
+          <a aria-current="page" href="solar-system.html">Solar System</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="overview">
+          <div class="hero-copy">
+            <p class="eyebrow">Solar system</p>
+            <h1>Explore the planets in a gallery layout with a glowing orbital map.</h1>
+            <p class="hero-text">
+              This page keeps the astronomy theme, but changes the composition, hierarchy, and layout so it
+              doesn’t mirror the reference image. It is built to work as a standalone static page.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="index.html">Back home</a>
+              <a class="button button-secondary" href="rotoscope.html">Open rotoscope</a>
+            </div>
+
+            <ul class="stats" aria-label="Solar system facts">
+              <li>
+                <span>8</span>
+                <strong>planets</strong>
+              </li>
+              <li>
+                <span>1</span>
+                <strong>sun</strong>
+              </li>
+              <li>
+                <span>1</span>
+                <strong>moon</strong>
+              </li>
+            </ul>
+          </div>
+
+          <aside class="orbit-card" aria-label="Illustrated solar system">
+            <div class="orbit-map" aria-hidden="true">
+              <div class="sun"></div>
+              <span class="orbit orbit-1"></span>
+              <span class="orbit orbit-2"></span>
+              <span class="orbit orbit-3"></span>
+              <span class="orbit orbit-4"></span>
+              <span class="orbit orbit-5"></span>
+              <span class="orbit orbit-6"></span>
+
+              <div class="planet-track track-mercury"><span class="planet mercury" title="Mercury"></span></div>
+              <div class="planet-track track-venus"><span class="planet venus" title="Venus"></span></div>
+              <div class="planet-track track-earth"><span class="planet earth" title="Earth"></span></div>
+              <div class="planet-track track-mars"><span class="planet mars" title="Mars"></span></div>
+              <div class="planet-track track-jupiter"><span class="planet jupiter" title="Jupiter"></span></div>
+              <div class="planet-track track-saturn"><span class="planet saturn" title="Saturn"></span></div>
+              <div class="planet-track track-uranus"><span class="planet uranus" title="Uranus"></span></div>
+              <div class="planet-track track-neptune"><span class="planet neptune" title="Neptune"></span></div>
+            </div>
+
+            <div class="orbit-caption">
+              <p>Designed to be different from the screenshot while keeping the space theme strong.</p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section" aria-labelledby="solar-details-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Planet cards</p>
+            <h2 id="solar-details-heading">A separate visual language with cards, glow, and a wide composition.</h2>
+          </div>
+
+          <div class="planet-grid">
+            <a class="planet-panel planet-link" href="#sun-video" aria-label="Open Sun video">
+              <span class="planet-mark sun-mark"></span>
+              <h3>Sun</h3>
+              <p>The central star, shown as the warm anchor of the system.</p>
+              <span class="planet-cta">Watch video</span>
+            </a>
+            <a class="planet-panel planet-link" href="#mercury-video" aria-label="Open Mercury video">
+              <span class="planet-mark mercury-mark"></span>
+              <h3>Mercury</h3>
+              <p>Fast orbit, rocky surface, and a compact profile.</p>
+              <span class="planet-cta">Open Mercury video</span>
+            </a>
+            <a class="planet-panel planet-link" href="#venus-video" aria-label="Open Venus video">
+              <span class="planet-mark venus-mark"></span>
+              <h3>Venus</h3>
+              <p>Dense atmosphere and a warm amber palette.</p>
+              <span class="planet-cta">Watch video</span>
+            </a>
+            <a class="planet-panel planet-link" href="#earth-video" aria-label="Open Earth video">
+              <span class="planet-mark earth-mark"></span>
+              <h3>Earth</h3>
+              <p>Blue atmosphere and a balanced card treatment.</p>
+              <span class="planet-cta">Watch video</span>
+            </a>
+            <a class="planet-panel planet-link" href="#mars-video" aria-label="Open Mars video">
+              <span class="planet-mark mars-mark"></span>
+              <h3>Mars</h3>
+              <p>Rust-toned surface and a slightly rougher visual edge.</p>
+              <span class="planet-cta">Watch video</span>
+            </a>
+            <a class="planet-panel planet-link" href="#jupiter-video" aria-label="Open Jupiter video">
+              <span class="planet-mark jupiter-mark"></span>
+              <h3>Jupiter</h3>
+              <p>Striped gas giant with the broadest visual presence here.</p>
+              <span class="planet-cta">Watch video</span>
+            </a>
+            <a class="planet-panel planet-link" href="#saturn-video" aria-label="Open Saturn video">
+              <span class="planet-mark saturn-mark"></span>
+              <h3>Saturn</h3>
+              <p>Ringed giant with a softer golden tone and elegant shape.</p>
+              <span class="planet-cta">Watch video</span>
+            </a>
+            <a class="planet-panel planet-link" href="#uranus-video" aria-label="Open Uranus video">
+              <span class="planet-mark uranus-mark"></span>
+              <h3>Uranus</h3>
+              <p>Pale cyan coloring and a cooler, more distant feel.</p>
+              <span class="planet-cta">Watch video</span>
+            </a>
+            <a class="planet-panel planet-link" href="#neptune-video" aria-label="Open Neptune video">
+              <span class="planet-mark neptune-mark"></span>
+              <h3>Neptune</h3>
+              <p>Deep blue outer planet with the coldest palette in the set.</p>
+              <span class="planet-cta">Watch video</span>
+            </a>
+            <a class="planet-panel planet-link" href="#pluto-video" aria-label="Open Pluto section">
+              <span class="planet-mark pluto-mark"></span>
+              <h3>Pluto</h3>
+              <p>A distant dwarf planet with icy terrain and a small, quiet presence.</p>
+              <span class="planet-cta">Watch video</span>
+            </a>
+            <a class="planet-panel planet-link" href="#moon-video" aria-label="Open Moon section">
+              <span class="planet-mark moon-mark"></span>
+              <h3>Moon</h3>
+              <p>Earth&apos;s natural satellite with a quieter gray palette and familiar craters.</p>
+              <span class="planet-cta">Watch video</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="section video-section" id="mercury-video" aria-labelledby="mercury-video-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Mercury video</p>
+            <h2 id="mercury-video-heading">Mercury, the closest planet to the Sun</h2>
+          </div>
+
+          <div class="video-box solar-video-box" aria-label="Mercury video and description">
+            <div class="video-player">
+              <video controls width="100%" height="220" preload="metadata" src="video/mercurys.mp4"></video>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Mercury</p>
+              <p class="video-description">Mercury is the smallest planet and the one closest to the Sun. It has a rocky surface, extreme temperature changes, and a very fast orbit around the Sun.</p>
+              <a href="blender/Mercury.blend" download="Mercury.blend" class="blender-download">↓ Download Blender File</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section video-section" id="venus-video" aria-labelledby="venus-video-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Venus video</p>
+            <h2 id="venus-video-heading">Venus, the hottest planet in the solar system</h2>
+          </div>
+
+          <div class="video-box solar-video-box" aria-label="Venus video and description">
+            <div class="video-player">
+              <video controls width="100%" height="220" preload="metadata" src="video/venus.mp4"></video>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Venus</p>
+              <p class="video-description">Venus is a bright inner planet wrapped in thick clouds and intense heat. Its atmosphere traps energy so strongly that the surface becomes hotter than Mercury&apos;s, even though it is farther from the Sun.</p>
+              <a href="blender/Venus.blend" download="Venus.blend" class="blender-download">↓ Download Blender File</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section video-section" id="earth-video" aria-labelledby="earth-video-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Earth video</p>
+            <h2 id="earth-video-heading">Earth, the planet we call home</h2>
+          </div>
+
+          <div class="video-box solar-video-box" aria-label="Earth video and description">
+            <div class="video-player">
+              <video controls width="100%" height="220" preload="metadata" src="video/Earth.mp4"></video>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Earth</p>
+              <p class="video-description">Earth is the only known planet with liquid surface water and life. Its blue oceans, white clouds, and active atmosphere make it the most familiar world in the solar system.</p>
+              <a href="blender/Earth.blend" download="Earth.blend" class="blender-download">↓ Download Blender File</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section video-section" id="mars-video" aria-labelledby="mars-video-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Mars note</p>
+            <h2 id="mars-video-heading">Mars, the red planet</h2>
+          </div>
+
+          <div class="video-box solar-video-box" aria-label="Mars description">
+            <div class="video-player video-placeholder">
+              <p class="video-placeholder-note">No local video file is added for Mars yet.</p>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Mars</p>
+              <p class="video-description">Mars has a dusty red surface, polar ice caps, and giant volcanoes. It is colder than Earth and has been explored often because scientists want to learn if it once had water or life.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section video-section" id="jupiter-video" aria-labelledby="jupiter-video-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Jupiter note</p>
+            <h2 id="jupiter-video-heading">Jupiter, the giant of the solar system</h2>
+          </div>
+
+          <div class="video-box solar-video-box" aria-label="Jupiter description">
+            <div class="video-player video-placeholder">
+              <p class="video-placeholder-note">No local video file is added for Jupiter yet.</p>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Jupiter</p>
+              <p class="video-description">Jupiter is the largest planet, famous for its Great Red Spot and colorful cloud bands. It is a massive gas giant with dozens of moons and a powerful magnetic field.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section video-section" id="saturn-video" aria-labelledby="saturn-video-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Saturn note</p>
+            <h2 id="saturn-video-heading">Saturn, the ringed planet</h2>
+          </div>
+
+          <div class="video-box solar-video-box" aria-label="Saturn description">
+            <div class="video-player video-placeholder">
+              <p class="video-placeholder-note">No local video file is added for Saturn yet.</p>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Saturn</p>
+              <p class="video-description">Saturn is known for its beautiful rings made of ice and rock. It is a lightweight gas giant with a soft golden color and many moons orbiting around it.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section video-section" id="uranus-video" aria-labelledby="uranus-video-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Uranus note</p>
+            <h2 id="uranus-video-heading">Uranus, the tilted ice giant</h2>
+          </div>
+
+          <div class="video-box solar-video-box" aria-label="Uranus description">
+            <div class="video-player video-placeholder">
+              <p class="video-placeholder-note">No local video file is added for Uranus yet.</p>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Uranus</p>
+              <p class="video-description">Uranus has a pale blue-green color because of methane in its atmosphere. It is an ice giant that spins on its side, making it one of the most unusual planets.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section video-section" id="neptune-video" aria-labelledby="neptune-video-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Neptune note</p>
+            <h2 id="neptune-video-heading">Neptune, the far blue world</h2>
+          </div>
+
+          <div class="video-box solar-video-box" aria-label="Neptune description">
+            <div class="video-player video-placeholder">
+              <p class="video-placeholder-note">No local video file is added for Neptune yet.</p>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Neptune</p>
+              <p class="video-description">Neptune is a deep blue planet far from the Sun. Strong winds and storms move across its atmosphere, giving it a cold and stormy appearance.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section video-section" id="pluto-video" aria-labelledby="pluto-video-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Pluto note</p>
+            <h2 id="pluto-video-heading">Pluto, the distant dwarf planet</h2>
+          </div>
+
+          <div class="video-box solar-video-box" aria-label="Pluto description">
+            <div class="video-player video-placeholder">
+              <p class="video-placeholder-note">No local video file is added for Pluto yet.</p>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Pluto</p>
+              <p class="video-description">Pluto is a small icy dwarf planet far beyond Neptune. Even though it is no longer classified as a major planet, it remains one of the most well-known objects in the outer solar system.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section video-section" id="moon-video" aria-labelledby="moon-video-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Moon note</p>
+            <h2 id="moon-video-heading">Moon, Earth&apos;s natural satellite</h2>
+          </div>
+
+          <div class="video-box solar-video-box" aria-label="Moon description">
+            <div class="video-player video-placeholder">
+              <p class="video-placeholder-note">No local video file is added for the Moon yet.</p>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Moon</p>
+              <p class="video-description">The Moon orbits Earth and is the reason for the tides and many night sky views. Its cratered surface and changing phases make it one of the easiest objects to recognize in space.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section video-section" id="sun-video" aria-labelledby="sun-video-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Sun video</p>
+            <h2 id="sun-video-heading">The Sun, the star at the center</h2>
+          </div>
+
+          <div class="video-box solar-video-box" aria-label="Sun video and description">
+            <div class="video-player">
+              <video controls width="100%" height="220" preload="metadata" src="video/sun.mp4"></video>
+            </div>
+            <div class="video-info">
+              <p class="video-title">Sun</p>
+              <p class="video-description">The Sun is a massive star that gives light and heat to every planet in the solar system. Without it, Earth would be a dark and frozen world.</p>
+              <a href="blender/Sun.blend" download="Sun.blend" class="blender-download">↓ Download Blender File</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
