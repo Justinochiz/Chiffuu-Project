@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Studio Atlas - Solar System</title>
+    <title>Chiffuu's work - Solar System</title>
     <meta
       name="description"
       content="A solar system page with an orbital illustration and a distinct layout from the reference design."
@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div class="bg-nebula" aria-hidden="true"></div>
+    <div class="bg-parallax" aria-hidden="true"></div>
+    <button id="bg-toggle" class="bg-toggle" aria-pressed="false" title="Toggle background animation">Background: On</button>
     <div class="page-shell">
       <header class="topbar">
-        <a class="brand" href="index.html" aria-label="Studio Atlas home">Studio Atlas</a>
+        <a class="brand" href="index.html" aria-label="Chiffuu's work home">Chiffuu's work</a>
         <nav class="nav" aria-label="Primary">
           <a href="index.html">Home</a>
           <a href="rotoscope.html">Rotoscope</a>
@@ -210,119 +214,126 @@
 
         <section class="section video-section" id="mars-video" aria-labelledby="mars-video-heading">
           <div class="section-heading">
-            <p class="eyebrow">Mars note</p>
+            <p class="eyebrow">Mars video</p>
             <h2 id="mars-video-heading">Mars, the red planet</h2>
           </div>
 
-          <div class="video-box solar-video-box" aria-label="Mars description">
-            <div class="video-player video-placeholder">
-              <p class="video-placeholder-note">No local video file is added for Mars yet.</p>
+          <div class="video-box solar-video-box" aria-label="Mars video and description">
+            <div class="video-player">
+              <video controls width="100%" height="220" preload="metadata" src="video/Mars.mp4"></video>
             </div>
             <div class="video-info">
               <p class="video-title">Mars</p>
               <p class="video-description">Mars has a dusty red surface, polar ice caps, and giant volcanoes. It is colder than Earth and has been explored often because scientists want to learn if it once had water or life.</p>
+              <a href="blender/Mars.blend" download="Mars.blend" class="blender-download">↓ Download Blender File</a>
             </div>
           </div>
         </section>
 
         <section class="section video-section" id="jupiter-video" aria-labelledby="jupiter-video-heading">
           <div class="section-heading">
-            <p class="eyebrow">Jupiter note</p>
+            <p class="eyebrow">Jupiter video</p>
             <h2 id="jupiter-video-heading">Jupiter, the giant of the solar system</h2>
           </div>
 
-          <div class="video-box solar-video-box" aria-label="Jupiter description">
-            <div class="video-player video-placeholder">
-              <p class="video-placeholder-note">No local video file is added for Jupiter yet.</p>
+          <div class="video-box solar-video-box" aria-label="Jupiter video and description">
+            <div class="video-player">
+              <video controls width="100%" height="220" preload="metadata" src="video/Jupiter.mp4"></video>
             </div>
             <div class="video-info">
               <p class="video-title">Jupiter</p>
               <p class="video-description">Jupiter is the largest planet, famous for its Great Red Spot and colorful cloud bands. It is a massive gas giant with dozens of moons and a powerful magnetic field.</p>
+              <a href="blender/Jupiter.blend" download="Jupiter.blend" class="blender-download">↓ Download Blender File</a>
             </div>
           </div>
         </section>
 
         <section class="section video-section" id="saturn-video" aria-labelledby="saturn-video-heading">
           <div class="section-heading">
-            <p class="eyebrow">Saturn note</p>
+            <p class="eyebrow">Saturn video</p>
             <h2 id="saturn-video-heading">Saturn, the ringed planet</h2>
           </div>
 
-          <div class="video-box solar-video-box" aria-label="Saturn description">
-            <div class="video-player video-placeholder">
-              <p class="video-placeholder-note">No local video file is added for Saturn yet.</p>
+          <div class="video-box solar-video-box" aria-label="Saturn video and description">
+            <div class="video-player">
+              <video controls width="100%" height="220" preload="metadata" src="video/Saturn.mp4"></video>
             </div>
             <div class="video-info">
               <p class="video-title">Saturn</p>
               <p class="video-description">Saturn is known for its beautiful rings made of ice and rock. It is a lightweight gas giant with a soft golden color and many moons orbiting around it.</p>
+              <a href="blender/Saturn.blend" download="Saturn.blend" class="blender-download">↓ Download Blender File</a>
             </div>
           </div>
         </section>
 
         <section class="section video-section" id="uranus-video" aria-labelledby="uranus-video-heading">
           <div class="section-heading">
-            <p class="eyebrow">Uranus note</p>
+            <p class="eyebrow">Uranus video</p>
             <h2 id="uranus-video-heading">Uranus, the tilted ice giant</h2>
           </div>
 
-          <div class="video-box solar-video-box" aria-label="Uranus description">
-            <div class="video-player video-placeholder">
-              <p class="video-placeholder-note">No local video file is added for Uranus yet.</p>
+          <div class="video-box solar-video-box" aria-label="Uranus video and description">
+            <div class="video-player">
+              <video controls width="100%" height="220" preload="metadata" src="video/Uranus.mp4"></video>
             </div>
             <div class="video-info">
               <p class="video-title">Uranus</p>
               <p class="video-description">Uranus has a pale blue-green color because of methane in its atmosphere. It is an ice giant that spins on its side, making it one of the most unusual planets.</p>
+              <a href="blender/Uranus.blend" download="Uranus.blend" class="blender-download">↓ Download Blender File</a>
             </div>
           </div>
         </section>
 
         <section class="section video-section" id="neptune-video" aria-labelledby="neptune-video-heading">
           <div class="section-heading">
-            <p class="eyebrow">Neptune note</p>
+            <p class="eyebrow">Neptune video</p>
             <h2 id="neptune-video-heading">Neptune, the far blue world</h2>
           </div>
 
-          <div class="video-box solar-video-box" aria-label="Neptune description">
-            <div class="video-player video-placeholder">
-              <p class="video-placeholder-note">No local video file is added for Neptune yet.</p>
+          <div class="video-box solar-video-box" aria-label="Neptune video and description">
+            <div class="video-player">
+              <video controls width="100%" height="220" preload="metadata" src="video/Neptune.mp4"></video>
             </div>
             <div class="video-info">
               <p class="video-title">Neptune</p>
               <p class="video-description">Neptune is a deep blue planet far from the Sun. Strong winds and storms move across its atmosphere, giving it a cold and stormy appearance.</p>
+              <a href="blender/Neptune.blend" download="Neptune.blend" class="blender-download">↓ Download Blender File</a>
             </div>
           </div>
         </section>
 
         <section class="section video-section" id="pluto-video" aria-labelledby="pluto-video-heading">
           <div class="section-heading">
-            <p class="eyebrow">Pluto note</p>
+            <p class="eyebrow">Pluto video</p>
             <h2 id="pluto-video-heading">Pluto, the distant dwarf planet</h2>
           </div>
 
-          <div class="video-box solar-video-box" aria-label="Pluto description">
-            <div class="video-player video-placeholder">
-              <p class="video-placeholder-note">No local video file is added for Pluto yet.</p>
+          <div class="video-box solar-video-box" aria-label="Pluto video and description">
+            <div class="video-player">
+              <video controls width="100%" height="220" preload="metadata" src="video/Pluto.mp4"></video>
             </div>
             <div class="video-info">
               <p class="video-title">Pluto</p>
               <p class="video-description">Pluto is a small icy dwarf planet far beyond Neptune. Even though it is no longer classified as a major planet, it remains one of the most well-known objects in the outer solar system.</p>
+              <a href="blender/Pluto.blend" download="Pluto.blend" class="blender-download">↓ Download Blender File</a>
             </div>
           </div>
         </section>
 
         <section class="section video-section" id="moon-video" aria-labelledby="moon-video-heading">
           <div class="section-heading">
-            <p class="eyebrow">Moon note</p>
+            <p class="eyebrow">Moon video</p>
             <h2 id="moon-video-heading">Moon, Earth&apos;s natural satellite</h2>
           </div>
 
-          <div class="video-box solar-video-box" aria-label="Moon description">
-            <div class="video-player video-placeholder">
-              <p class="video-placeholder-note">No local video file is added for the Moon yet.</p>
+          <div class="video-box solar-video-box" aria-label="Moon video and description">
+            <div class="video-player">
+              <video controls width="100%" height="220" preload="metadata" src="video/Moon.mp4"></video>
             </div>
             <div class="video-info">
               <p class="video-title">Moon</p>
               <p class="video-description">The Moon orbits Earth and is the reason for the tides and many night sky views. Its cratered surface and changing phases make it one of the easiest objects to recognize in space.</p>
+              <a href="blender/Moon.blend" download="Moon.blend" class="blender-download">↓ Download Blender File</a>
             </div>
           </div>
         </section>
@@ -346,5 +357,177 @@
         </section>
       </main>
     </div>
+    <script>
+      (function(){
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        const nebulaEl = document.querySelector('.bg-nebula');
+        const parallaxEl = document.querySelector('.bg-parallax');
+        const toggleBtn = document.getElementById('bg-toggle');
+
+        // configuration (easy to tweak)
+        const CFG = {
+          midDensityFactor: 1.2,
+          frontDensityFactor: 1.0,
+          shootingChance: 0.008,
+          galaxyCount: 4,
+          planetCount: 0, /* disabled moving planets */
+          planetOrbitScale: 0.18,
+          planetSpeedFactor: 1.0
+        };
+
+        let DPR = Math.max(1, window.devicePixelRatio || 1);
+        let W = 0, H = 0;
+
+        let bgCanvas, bgCtx; // offscreen
+        let midStars = [], frontStars = [], shooting = [], planets = [];
+        let running = true;
+
+        const clamp = (v,a,b)=> Math.max(a, Math.min(b, v));
+
+        // load saved preference
+        const saved = localStorage.getItem('bg-anim');
+        if (saved === 'off') { running = false; toggleBtn.setAttribute('aria-pressed','true'); toggleBtn.textContent = 'Background: Off'; canvas.style.display='none'; nebulaEl.style.display='none'; parallaxEl.style.display='none'; }
+
+        toggleBtn.addEventListener('click', ()=>{
+          running = !running;
+          if(running){
+            toggleBtn.setAttribute('aria-pressed','false'); toggleBtn.textContent = 'Background: On';
+            canvas.style.display = ''; nebulaEl.style.display=''; parallaxEl.style.display='';
+            localStorage.setItem('bg-anim','on');
+          } else {
+            toggleBtn.setAttribute('aria-pressed','true'); toggleBtn.textContent = 'Background: Off';
+            canvas.style.display = 'none'; nebulaEl.style.display='none'; parallaxEl.style.display='none';
+            localStorage.setItem('bg-anim','off');
+          }
+        });
+
+        function resize(){
+          DPR = Math.max(1, window.devicePixelRatio || 1);
+          W = canvas.width = Math.round(window.innerWidth * DPR);
+          H = canvas.height = Math.round(window.innerHeight * DPR);
+          canvas.style.width = window.innerWidth + 'px';
+          canvas.style.height = window.innerHeight + 'px';
+
+          bgCanvas = document.createElement('canvas'); bgCanvas.width = W; bgCanvas.height = H; bgCtx = bgCanvas.getContext('2d');
+          prepareBackground();
+          prepareStars();
+        }
+
+        function prepareBackground(){
+          bgCtx.clearRect(0,0,W,H);
+          // base gradient
+          const g = bgCtx.createLinearGradient(0,0,W,H);
+          g.addColorStop(0, '#01030a'); g.addColorStop(0.45, '#041124'); g.addColorStop(1, '#02040a');
+          bgCtx.fillStyle = g; bgCtx.fillRect(0,0,W,H);
+
+          // soft galaxies (larger, varied hues)
+          for(let i=0;i<CFG.galaxyCount;i++){
+            const gx = Math.random()*W; const gy = Math.random()*H;
+            const gr = (Math.random()*0.08+0.04)*Math.min(W,H);
+            const gg = bgCtx.createRadialGradient(gx,gy,0,gx,gy,gr);
+            const hue = 150 + Math.random()*160;
+            gg.addColorStop(0, `hsla(${hue},70%,78%,${0.12*Math.random()+0.08})`);
+            gg.addColorStop(0.35, `hsla(${hue},60%,60%,${0.06*Math.random()+0.03})`);
+            gg.addColorStop(1, 'transparent');
+            bgCtx.globalCompositeOperation = 'lighter';
+            bgCtx.fillStyle = gg;
+            bgCtx.beginPath(); bgCtx.ellipse(gx,gy,gr,gr*0.6, Math.random()*Math.PI,0,Math.PI*2); bgCtx.fill();
+            bgCtx.globalCompositeOperation = 'source-over';
+          }
+
+          // add subtle noise-based nebula texture for realism (reduced strength)
+          const noise = createNoiseCanvas(Math.max(64, Math.round(W/8)), Math.max(64, Math.round(H/8)));
+          bgCtx.globalAlpha = 0.36;
+          bgCtx.filter = 'blur(18px)';
+          bgCtx.globalCompositeOperation = 'screen';
+          bgCtx.drawImage(noise, 0, 0, W, H);
+          bgCtx.filter = 'none';
+          bgCtx.globalCompositeOperation = 'source-over';
+          bgCtx.globalAlpha = 1;
+
+          // faint static tiny stars with subtle color variation
+          const bgCount = Math.floor((W*H)/(160000));
+          for(let i=0;i<bgCount;i++){
+            const x = Math.random()*W; const y = Math.random()*H; const r = (Math.random()*1.4+0.2)*DPR;
+            const hue = 200 + Math.random()*55; // bluish-white
+            const a = Math.random()*0.6+0.12;
+            bgCtx.fillStyle = `hsla(${hue},30%,95%,${a})`;
+            bgCtx.fillRect(x,y,r,r);
+          }
+        }
+
+        // create small noise canvas, upscale and blur for soft nebula texture
+        function createNoiseCanvas(wN, hN){
+          const c = document.createElement('canvas'); c.width = wN; c.height = hN;
+          const cx = c.getContext('2d');
+          const id = cx.createImageData(wN, hN);
+          for(let i=0;i<id.data.length;i+=4){
+            const v = Math.floor(Math.random()*256);
+            id.data[i]=v; id.data[i+1]=Math.floor(v*0.9); id.data[i+2]=Math.floor(v*1.1); id.data[i+3]=Math.floor(24 + Math.random()*120);
+          }
+          cx.putImageData(id,0,0);
+          // upscale to full background on drawImage with smoothing on
+          return c;
+        }
+
+        function prepareStars(){
+          midStars = []; frontStars = [];
+          const area = W*H;
+          const midCount = clamp(Math.floor(area/90000 * CFG.midDensityFactor), 80, 1000);
+          const frontCount = clamp(Math.floor(area/300000 * CFG.frontDensityFactor), 30, 400);
+          for(let i=0;i<midCount;i++) midStars.push({x:Math.random()*W,y:Math.random()*H,r:(Math.random()*1.2+0.6)*DPR,baseAlpha:Math.random()*0.6+0.25,twinkleSpeed:Math.random()*0.02+0.005,tw:Math.random()*Math.PI*2,vx:(Math.random()-0.5)*0.02*DPR,vy:(Math.random()-0.5)*0.02*DPR});
+          for(let i=0;i<frontCount;i++) frontStars.push({x:Math.random()*W,y:Math.random()*H,r:(Math.random()*1.6+1.2)*DPR,alpha:Math.random()*0.6+0.4,vx:(Math.random()-0.5)*0.25*DPR,vy:(Math.random()-0.5)*0.15*DPR});
+        }
+
+        // moving planets disabled — we only render nebula and stars
+
+        function spawnShooting(){ if(Math.random() < CFG.shootingChance) { const fromLeft = Math.random()<0.5; const y=Math.random()*H*0.8+H*0.05; const len=Math.random()*(W*0.12)+W*0.06; shooting.push({x:fromLeft?-len:W+len,y,vx:(fromLeft?1:-1)*(Math.random()*1.6+2.4)*DPR,vy:(Math.random()*0.6-0.3)*DPR,life:0,maxLife:Math.random()*0.4+0.6,len}); } }
+
+        let last = performance.now(); const mouse = {x:0,y:0}; window.addEventListener('mousemove', e=>{ mouse.x = (e.clientX/window.innerWidth - 0.5) * 18; mouse.y = (e.clientY/window.innerHeight - 0.5) * 18; });
+        // scroll-based parallax for nebula and parallax overlay
+        let latestScroll = window.scrollY || 0; let tickingScroll = false;
+        window.addEventListener('scroll', ()=>{ latestScroll = window.scrollY || 0; if(!tickingScroll){ window.requestAnimationFrame(()=>{ const t = latestScroll * 0.02; nebulaEl.style.transform = `translateY(${t}px) translateX(${latestScroll*0.005}px)`; parallaxEl.style.transform = `translateY(${t*0.6}px)`; tickingScroll = false; }); tickingScroll = true; } });
+
+        function draw(time){
+          const dt = Math.min(66, time - last); last = time;
+          if(!running){ requestAnimationFrame(draw); return; }
+
+          canvas.style.transform = `translate(${mouse.x*0.6}px, ${mouse.y*0.6}px)`;
+          ctx.clearRect(0,0,W,H);
+          // draw background
+          ctx.drawImage(bgCanvas, 0, 0, W, H);
+
+          // draw orbiting planets behind stars
+          for(const p of planets){
+            p.angle += p.speed * dt;
+            const x = p.cx + Math.cos(p.angle) * p.orbit;
+            const y = p.cy + Math.sin(p.angle) * p.orbit * 0.66;
+            const grad = ctx.createRadialGradient(x,y,0,x,y,p.r*2.5);
+            grad.addColorStop(0, p.color);
+            grad.addColorStop(0.6, p.color.replace(/\d?\.?\d*\)$/,'0.18)'));
+            grad.addColorStop(1, 'transparent');
+            ctx.fillStyle = grad; ctx.beginPath(); ctx.arc(x,y,p.r,0,Math.PI*2); ctx.fill();
+          }
+
+          // mid stars
+          for(const s of midStars){ s.tw += s.twinkleSpeed * dt * 0.06; const a = s.baseAlpha + Math.sin(s.tw)*0.35*s.baseAlpha; const size=s.r; const g=ctx.createRadialGradient(s.x,s.y,0,s.x,s.y,size*4); g.addColorStop(0,`rgba(255,255,255,${clamp(a,0.05,1)})`); g.addColorStop(0.6,`rgba(180,200,255,${clamp(a*0.45,0.02,0.6)})`); g.addColorStop(1,'transparent'); ctx.fillStyle=g; ctx.fillRect(s.x-size*2,s.y-size*2,size*4,size*4); s.x += s.vx * dt * 0.06; s.y += s.vy * dt * 0.06; if(s.x < -50) s.x = W+50; if(s.x > W+50) s.x = -50; if(s.y < -50) s.y = H+50; if(s.y > H+50) s.y = -50; }
+
+          // front stars
+          for(const f of frontStars){ const size=f.r; ctx.fillStyle = `rgba(255,255,255,${clamp(f.alpha,0.15,1)})`; ctx.fillRect(f.x-size*0.6,f.y-size*0.6,size*1.2,size*1.2); f.x += f.vx * dt * 0.06; f.y += f.vy * dt * 0.06; if(f.x < -60) f.x = W+60; if(f.x > W+60) f.x = -60; if(f.y < -60) f.y = H+60; if(f.y > H+60) f.y = -60; }
+
+          // shooting stars
+          spawnShooting();
+          for(let i=shooting.length-1;i>=0;i--){ const s=shooting[i]; s.life += dt/1000; const t = s.life/s.maxLife; const x = s.x + s.vx * dt/16; const y = s.y + s.vy * dt/16; ctx.strokeStyle = `rgba(255,255,255,${clamp(1-t,0,1)})`; ctx.lineWidth = Math.max(1,DPR*2); ctx.beginPath(); ctx.moveTo(s.x,s.y); ctx.lineTo(x - s.vx*0.6, y - s.vy*0.6); ctx.stroke(); ctx.fillStyle = `rgba(255,255,255,${clamp(1-t,0,1)})`; ctx.beginPath(); ctx.arc(x,y,Math.max(1,DPR*1.6),0,Math.PI*2); ctx.fill(); s.x = x; s.y = y; if(s.life > s.maxLife) shooting.splice(i,1); }
+
+          requestAnimationFrame(draw);
+        }
+
+        function init(){ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ canvas.style.display='none'; nebulaEl.style.display='none'; parallaxEl.style.display='none'; return; } resize(); requestAnimationFrame(draw); }
+
+        window.addEventListener('resize', ()=>{ clearTimeout(window._bgResize); window._bgResize = setTimeout(resize, 180); });
+        init();
+      })();
+    </script>
   </body>
 </html>

@@ -400,6 +400,85 @@ a {
   transform-origin: center;
 }
 
+/* Background animation canvas and nebula */
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  display: block;
+  pointer-events: none;
+}
+
+.bg-nebula {
+  position: fixed;
+  inset: -10% -20%;
+  z-index: -3;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 30% 30%, rgba(80,120,170,0.12), transparent 30%),
+              radial-gradient(ellipse at 70% 60%, rgba(200,120,160,0.08), transparent 34%),
+              radial-gradient(ellipse at 50% 70%, rgba(160,200,255,0.06), transparent 40%);
+  filter: blur(28px) saturate(1.05);
+  opacity: 0.62;
+  mix-blend-mode: screen;
+  animation: nebulaDrift 36s ease-in-out infinite;
+}
+
+@keyframes nebulaDrift {
+  0% { transform: translate3d(0,0,0) scale(1); }
+  50% { transform: translate3d(-3%,1.5%,0) scale(1.02); }
+  100% { transform: translate3d(0,0,0) scale(1); }
+}
+
+/* small performance-friendly reduced-res overlay for subtle parallax */
+.bg-parallax {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.02) 0 1px, transparent 1.5px), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.02) 0 1px, transparent 1.5px);
+  background-size: 240px 240px, 360px 360px;
+  opacity: 0.65;
+  pointer-events: none;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-nebula,
+  #bg-canvas {
+    animation: none;
+  }
+}
+
+/* Background toggle button */
+.bg-toggle {
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  z-index: 9999;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+
+.bg-toggle[aria-pressed="true"] {
+  background: linear-gradient(180deg, rgba(160,200,255,0.08), rgba(120,170,220,0.04));
+  color: #fff;
+  border-color: rgba(150,200,255,0.18);
+}
+
+.bg-toggle:focus {
+  outline: 2px solid rgba(150,200,255,0.12);
+  outline-offset: 2px;
+}
+
 .frame::before,
 .frame::after {
   content: "";
@@ -534,10 +613,12 @@ a {
 }
 
 .blender-download {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  width: 100%;
+  max-width: 100%;
   min-height: 48px;
   padding: 0 24px;
   border-radius: 999px;
@@ -550,6 +631,7 @@ a {
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   cursor: pointer;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .blender-download:hover,
