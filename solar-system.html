@@ -26,6 +26,35 @@
       </header>
 
       <main>
+        <section class="section age-section" aria-labelledby="age-calculator-heading">
+          <div class="section-heading age-section-heading">
+            <p class="eyebrow">Planetary age calculator</p>
+            <h1 id="age-calculator-heading">Planetary Age Calculator</h1>
+          </div>
+
+          <div class="age-panel">
+            <form class="age-form" id="age-form">
+              <label class="age-label" for="earth-age">Enter your Earth age</label>
+              <div class="age-controls">
+                <input id="earth-age" name="earth-age" class="age-input" type="number" min="0" step="0.1" placeholder="Enter your Earth age" required />
+                <button class="button button-primary age-button" type="submit">Calculate your Age</button>
+              </div>
+            </form>
+
+            <div class="planet-age-summary is-hidden" id="age-results" aria-live="polite">
+              <article class="age-card" data-planet="Mercury"><h3>Mercury</h3><p class="age-value">Age: —</p><p class="rev-value">Revolution: —</p></article>
+              <article class="age-card" data-planet="Venus"><h3>Venus</h3><p class="age-value">Age: —</p><p class="rev-value">Revolution: —</p></article>
+              <article class="age-card" data-planet="Earth"><h3>Earth</h3><p class="age-value">Age: —</p><p class="rev-value">Revolution: —</p></article>
+              <article class="age-card" data-planet="Mars"><h3>Mars</h3><p class="age-value">Age: —</p><p class="rev-value">Revolution: —</p></article>
+              <article class="age-card" data-planet="Jupiter"><h3>Jupiter</h3><p class="age-value">Age: —</p><p class="rev-value">Revolution: —</p></article>
+              <article class="age-card" data-planet="Saturn"><h3>Saturn</h3><p class="age-value">Age: —</p><p class="rev-value">Revolution: —</p></article>
+              <article class="age-card" data-planet="Uranus"><h3>Uranus</h3><p class="age-value">Age: —</p><p class="rev-value">Revolution: —</p></article>
+              <article class="age-card" data-planet="Neptune"><h3>Neptune</h3><p class="age-value">Age: —</p><p class="rev-value">Revolution: —</p></article>
+              <article class="age-card" data-planet="Pluto"><h3>Pluto</h3><p class="age-value">Age: —</p><p class="rev-value">Revolution: —</p></article>
+            </div>
+          </div>
+        </section>
+
         <section class="hero" id="overview">
           <div class="hero-copy">
             <p class="eyebrow">Solar system</p>
@@ -527,6 +556,60 @@
 
         window.addEventListener('resize', ()=>{ clearTimeout(window._bgResize); window._bgResize = setTimeout(resize, 180); });
         init();
+      })();
+    </script>
+    <script>
+      (function () {
+        const ratios = {
+          Mercury: 0.24,
+          Venus: 0.6201379,
+          Earth: 1,
+          Mars: 1.8807523,
+          Jupiter: 11.842105,
+          Saturn: 29.508,
+          Uranus: 85.714,
+          Neptune: 163.636,
+          Pluto: 257.143
+        };
+
+        const form = document.getElementById('age-form');
+        const input = document.getElementById('earth-age');
+        const cards = Array.from(document.querySelectorAll('.age-card'));
+
+        function formatAge(value) {
+          if (!Number.isFinite(value)) {
+            return '—';
+          }
+
+          return `${value.toFixed(2)}`;
+        }
+
+        function updateAges() {
+          const earthAge = Number.parseFloat(input.value);
+
+          cards.forEach((card) => {
+            const planet = card.dataset.planet;
+            const ageNode = card.querySelector('.age-value');
+            const revNode = card.querySelector('.rev-value');
+
+            if (!Number.isFinite(earthAge) || earthAge < 0) {
+              ageNode.textContent = 'Age: —';
+              revNode.textContent = 'Revolution: —';
+              return;
+            }
+
+            const planetAge = earthAge / ratios[planet];
+            const revolutions = Math.floor(planetAge);
+            ageNode.textContent = `Age: ${formatAge(planetAge)}`;
+            revNode.textContent = `Revolution: ${revolutions}`;
+          });
+        }
+
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          updateAges();
+          document.getElementById('age-results').classList.remove('is-hidden');
+        });
       })();
     </script>
   </body>
