@@ -14,7 +14,7 @@
     <canvas id="bg-canvas" aria-hidden="true"></canvas>
     <div class="bg-nebula" aria-hidden="true"></div>
     <div class="bg-parallax" aria-hidden="true"></div>
-    <button id="bg-toggle" class="bg-toggle" aria-pressed="false" title="Toggle background animation">Background: On</button>
+    <button id="bg-toggle" class="bg-toggle" aria-pressed="false" aria-label="Toggle background animation" title="Toggle background animation">🌙</button>
     <div class="page-shell">
       <header class="topbar">
         <a class="brand" href="index.html" aria-label="Chiffuu's work home">Chiffuu's work</a>
@@ -433,16 +433,16 @@
 
         // load saved preference
         const saved = localStorage.getItem('bg-anim');
-        if (saved === 'off') { running = false; toggleBtn.setAttribute('aria-pressed','true'); toggleBtn.textContent = 'Background: Off'; canvas.style.display='none'; nebulaEl.style.display='none'; parallaxEl.style.display='none'; }
+        if (saved === 'off') { running = false; toggleBtn.setAttribute('aria-pressed','true'); canvas.style.display='none'; nebulaEl.style.display='none'; parallaxEl.style.display='none'; }
 
         toggleBtn.addEventListener('click', ()=>{
           running = !running;
           if(running){
-            toggleBtn.setAttribute('aria-pressed','false'); toggleBtn.textContent = 'Background: On';
+            toggleBtn.setAttribute('aria-pressed','false');
             canvas.style.display = ''; nebulaEl.style.display=''; parallaxEl.style.display='';
             localStorage.setItem('bg-anim','on');
           } else {
-            toggleBtn.setAttribute('aria-pressed','true'); toggleBtn.textContent = 'Background: Off';
+            toggleBtn.setAttribute('aria-pressed','true');
             canvas.style.display = 'none'; nebulaEl.style.display='none'; parallaxEl.style.display='none';
             localStorage.setItem('bg-anim','off');
           }

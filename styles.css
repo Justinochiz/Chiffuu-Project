@@ -1430,6 +1430,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
+  pointer-events: none;
 }
 
 .weekly-preview::before {
@@ -1455,6 +1456,10 @@ a {
   border-color: transparent transparent transparent rgba(255, 255, 255, 0.96);
   transform: translate(-35%, -50%);
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+.weekly-play {
+  pointer-events: none;
 }
 
 .weekly-card p {
